@@ -1,16 +1,43 @@
-# crazy_pong
+# Crazy Pong
 
-A new Flutter project.
+Mobile arcade game for android/ios
 
-## Getting Started
+## CI (Continuous Integration)
 
-This project is a starting point for a Flutter application.
+Этот проект включает автоматизацию CI для обеспечения качества кода путём выполнения тестов перед отправкой в git.
 
-A few resources to get you started if this is your first Flutter project:
+### Вариант 1: Local CI Script (Windows - PowerShell)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Запустите локальный CI-процесс, используя предоставленный скрипт PowerShell:
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+```powershell
+.\ci.ps1
+```
+
+Или с пользовательским сообщением коммита:
+
+```powershell
+.\ci.ps1 -CommitMessage "Your custom message"
+```
+
+Скрипт выполнит:
+
+- Запуск всех модульных и виджетных тестов командой `flutter test`
+- Прервет выполнение, если какие-либо тесты не пройдут, с выводом сообщения об ошибке
+- Проверит наличие несохранённых изменений
+- Зафиксирует все изменения с указанным сообщением
+- Выполнит push в удалённый репозиторий git
+
+### Вариант 2: То же самое, но с проверкой перед push, что проект билдится
+
+```powershell
+.\ci-build.ps1
+```
+
+Или с пользовательским сообщением коммита:
+
+```powershell
+.\ci-build.ps1 -CommitMessage "Your custom message"
+```
+
+

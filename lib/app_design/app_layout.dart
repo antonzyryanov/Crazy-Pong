@@ -69,7 +69,7 @@ abstract final class AppLayout {
   }
 
   static double hudTopInset(BuildContext context) {
-    return isTablet(context) ? 14 : 10;
+    return isTablet(context) ? 63 : 40;
   }
 
   static double bottomActionInset(BuildContext context) {
