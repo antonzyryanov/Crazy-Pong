@@ -4,37 +4,37 @@ Mobile arcade game for android/ios
 
 ## CI (Continuous Integration)
 
-Этот проект включает автоматизацию CI для обеспечения качества кода путём выполнения тестов перед отправкой в git.
+This project includes CI automation to ensure code quality by running tests before pushing to git.
 
-### Вариант 1: Local CI Script (Windows - PowerShell)
+### Option 1: Local CI Script (Windows - PowerShell)
 
-Запустите локальный CI-процесс, используя предоставленный скрипт PowerShell:
+Run the local CI process using the provided PowerShell script:
 
 ```powershell
 .\ci.ps1
 ```
 
-Или с пользовательским сообщением коммита:
+Or with a custom commit message:
 
 ```powershell
 .\ci.ps1 -CommitMessage "Your custom message"
 ```
 
-Скрипт выполнит:
+The script will perform:
 
-- Запуск всех модульных и виджетных тестов командой `flutter test`
-- Прервет выполнение, если какие-либо тесты не пройдут, с выводом сообщения об ошибке
-- Проверит наличие несохранённых изменений
-- Зафиксирует все изменения с указанным сообщением
-- Выполнит push в удалённый репозиторий git
+- Run all unit and widget tests with 'flutter test'
+- Abort execution if any tests fail, with an error message
+- Check for uncommitted changes
+- Commit all changes with the specified message
+- Push to the remote git repository
 
-### Вариант 2: То же самое, но с проверкой перед push, что проект билдится
+### Option 2: The same, but with a check that the project builds before push
 
 ```powershell
 .\ci-build.ps1
 ```
 
-Или с пользовательским сообщением коммита:
+Or with a custom commit message:
 
 ```powershell
 .\ci-build.ps1 -CommitMessage "Your custom message"
