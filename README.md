@@ -25,6 +25,38 @@ Mobile arcade game for android/ios
 	</tr>
 </table>
 
+## App Functionality
+
+Crazy Pong is a mobile arcade game where the player controlsthe ball, avoids enemy obstacles, and scores points by reaching boxes.
+
+Main gameplay features:
+
+- Real-time ball interaction with physics-based movement
+- Progressive difficulty with faster gameplay and more dangerous enemy patterns
+- Multiple visual game assets (balls, enemies, fields, targets, game over screens)
+- Sound effects and in-game audio feedback
+- Localized UI and onboarding flow for new players
+- Game over state with clear result feedback and restart loop
+
+## Architecture and Design
+
+The app follows a layered Flutter structure with feature separation under the `lib/app` directory.
+
+Architecture overview:
+
+- **Presentation layer**: screens and widgets in `lib/app/screens` and `lib/app/widgets`
+- **State management layer**: BLoC logic in `lib/app/bloc` for predictable event/state flow
+- **Domain/data layer**: models and repositories in `lib/app/models` and `lib/app/repositories`
+- **Infrastructure layer**: services in `lib/app/services` and navigation in `lib/app/router`
+- **Design system**: shared tokens and constants in `lib/app_design` (colors, dimensions, durations, layout, audio)
+
+Design principles:
+
+- Fast and responsive gameplay-first UX
+- Consistent visual style via centralized design constants
+- Maintainable modular code with clear folder boundaries
+- Cross-platform support for Android and iOS from a single Flutter codebase
+
 ## CI (Continuous Integration)
 
 This project includes CI automation to ensure code quality by running tests before pushing to git.
