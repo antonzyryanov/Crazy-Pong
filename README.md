@@ -27,7 +27,7 @@ Mobile arcade game for android/ios
 
 ## App Functionality
 
-Crazy Pong is a mobile arcade game where the player controlsthe ball, avoids enemy obstacles, and scores points by reaching boxes.
+Crazy Pong is a mobile arcade game where the player controls the ball, avoids enemy obstacles, and scores points by reaching boxes.
 
 Main gameplay features:
 
